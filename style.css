@@ -8,9 +8,10 @@
 }
 
 body {
-    background-image: url(image/Screenshot\ 2025-03-06\ 113452.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: white;
+    /* background-image: url(image/Screenshot\ 2025-03-06\ 113452.png); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 header {
@@ -31,7 +32,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 55px;
 }
 
 .logo {
@@ -54,6 +55,10 @@ header {
     text-transform: capitalize;
     font-weight: bolder;
     font-size: 20px;
+}
+
+.hamburger, #toggle {
+    display: none;
 }
 
 .navRight {
@@ -92,7 +97,7 @@ header {
 .subscribe > input {
     padding: 0.5rem 5rem;
     border: none;
-    height: 70px;
+    height: 50px;
 }
 
 .subscribe > input::placeholder, .inputCont > input::placeholder {
@@ -108,7 +113,7 @@ header {
     font-size: 17px;
     text-transform: capitalize;
     cursor: pointer;
-    height: 80px;
+    height: 55px;
 }
 
 .subscribe > button:hover {
@@ -124,7 +129,8 @@ header {
     justify-content: space-between;
     align-items: center;
     border-block: 1.4px solid #ececec;
-    height: 80px;
+    background-color: white;
+    height: 55px;
 
 }
 
@@ -153,12 +159,12 @@ header {
 }
 
 .tabsLinks {
-    border-left: 2px solid #ececec;
+    border-inline: 2px solid #ececec;
     display: flex;
     gap: 1.65rem;
     align-items: center;
     padding-left:1.5rem;
-    height: 80px;
+    /* height: 55px; */
 }
 
 .tabsLinks > a {
@@ -172,7 +178,7 @@ header {
 .tabsLinks > span {
     border-left: 2px solid #ececec;
     padding: 1.6rem;
-    height: 80px;
+    height: 55px;
     display: flex;
     align-items: center;
     font-size: 25px;
@@ -188,7 +194,7 @@ header {
 .generalistBlog {
     /* border: 2px solid red; */
     display: grid;
-    grid-template-columns: 0.9fr 2fr 0.9fr;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 1rem;
     margin-block: 2rem;
     padding-top: 10rem;
@@ -267,18 +273,16 @@ header {
 
 .latestContent {
     border: 2px solid #ececec;
-    max-width: 590px;
-    margin-top: -4.8rem;
-    margin-left: 2.8rem;
+    max-width: 430px;
     background-color: white;
     padding-inline: 4rem;
-    height: 321px;
+    margin: -3rem auto 0;
 }
 
 .latestContent > h1 {
     text-transform: capitalize;
     text-align: center;
-    font-size: 3rem;
+    font-size: 1.96rem;
 }
 
 .latestContent > span {
@@ -289,14 +293,9 @@ header {
 }
 
 .latestContent > p {
-    font-size: 18px;
-    /* font-weight: 700; */
-    text-align: center;
-    margin-top: 1.5rem;
-    margin-left: -1.2rem;
-    width: 500px;
-    line-height: 30px;
-    word-spacing: 2px;
+    font-size: 13px;
+    width: 370px;
+    margin: .7rem auto;
 }
 
 .mostViewed {
@@ -326,8 +325,9 @@ header {
 }
 
 .explore {
-    border: 3.5px solid red;
+    /* border: 3.5px solid red; */
     padding-bottom: 200px;
+    border-top: 3.5px solid #ececec;
 }
 
 .exploreHeading {
@@ -354,7 +354,131 @@ header {
     font-size: 20px;
 }
 
-.scroll {
+.scrollOne {
+    /* border: 2px solid red; */
+    height: 80px;
+    margin-top: 30px;
+}
+.scrollTwo {
+    /* border: 2px solid black; */
+    height: 80px;
+    margin-top: 8px;
+}
+
+.scrollingWrapper {
+    width: 70px;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    margin-inline: 0px;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform:rotate(-90deg) translateY(-80px);
+    transform-origin:right top;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+   height: 1500px;
+    outline: none;
+    /* scrollbar-width: thin;
+    scrollbar-color: whitesmoke white; */
+    scrollbar-gutter: stable both-edges;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+  }
+  
+  /* .scrollingWrapper::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+
+  } */
+
+  .scrollingWrapper::-webkit-scrollbar { 
+    display: none;
+    -ms-overflow-style: none;
+}
+  
+.scrollingWrapper::-webkit-scrollbar-thumb {
+    background-color: white;
+    color: white;
+    border-radius: 3px;
+}
+
+  
+.scrollingWrapper:hover,
+.scrollingWrapper:active,
+.scrollingWrapper:focus {
+  overflow-y: scroll;
+}
+
+.scrollingWrapper > .card {
+    border: 2px solid #ececec;
+    width: 50px;
+    padding-block: 50px;
+    background-color: whitesmoke;
+    float: none;
+    height: 100;
+    margin: 0.70% 0;
+    display: block;
+    zoom: 1;
+    transform:rotate(90deg);
+    transform-origin: right top;
+}
+
+
+
+.card {
+    display: flex;
+    justify-content: start;
+    align-content: start;
+    box-sizing: border-box;
+    /* width: 100%; */
+}
+
+/* .scrollingWrapper{
+    display:block;
+    top:0;
+    left:0;
+    width:80px;
+    max-height:500px;
+    margin:0;
+    background:#abc;
+    overflow-y:auto;
+    overflow-x:hidden;
+    transform:rotate(-90deg) translateY(-80px);
+    transform-origin:right top;
+  }
+  .scrollingWrapper > .card{
+    display:block;
+    padding:5px;
+    background:#cab;
+    transform:rotate(90deg);
+    transform-origin: right top;
+  } */
+  
+  
+  .squares{
+    padding:60px 0 0 0;
+  }
+  
+  .squares > .card{
+    width:auto;
+    height:auto;
+    margin:10px;
+  }
+  
+
+.card > p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+    width: 100px;
+    padding: 20px;
+}
+
+/* .scroll {
     padding-top: 2.5rem;
 }
 
@@ -369,11 +493,11 @@ header {
  
 }
 
-/* .scrollingWrapper::-webkit-scrollbar { 
+.scrollingWrapper::-webkit-scrollbar { 
     display: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
-} */
+}
 
 .scrollingWrapper > .card {
     border: 2px solid #ececec;
@@ -397,4 +521,151 @@ header {
     text-align: center;
     font-weight: bolder;
     padding-inline: 20px;
+} */
+
+.contactContainer {
+    border: 3.5px solid #ececec;
+    background-color: whitesmoke;
+    margin-top: -100px;
+    padding-block: 41px;
+    padding-inline: 49px;
+    margin-bottom: 35px;
+}
+
+.contactContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactWriteUp > h1 {
+    font-size: 35.8px;
+    font-weight: bolder;
+    width: 350px;
+}
+
+.join {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 22px;
+}
+
+.joinImages > img {
+    border: 2px solid whitesmoke;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+}
+
+.imgOne {
+    margin-right: -12px;
+}
+
+.imgTwo {
+    margin-right: -12px;
+}
+
+.join > p {
+    word-spacing: 2.5px;
+}
+
+.subscribeDown {
+    /* border: 2px solid pink; */
+    display: flex;
+}
+
+.subscribeDown > input {
+    padding-block: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 15rem;
+    margin-right: -5px;
+    border: 2px solid #ececec;
+    height: 70px;
+}
+
+.subscribeDown > input::placeholder {
+    color: gray;
+    font-size: 15px;
+    text-align: start;
+}
+
+.subscribeDown > button {
+    padding: 0rem 3rem;
+    border: none;
+    background-color: #069275;
+    color: #fff;
+    font-size: 17px;
+    text-transform: capitalize;
+    cursor: pointer;
+    height: 70px;
+}
+
+.subscribeDown > button:hover {
+    color: white;
+    background-color: #39ac8e;
+    /* -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: white; */
+}
+
+@media (min-width: 260px) and (max-width: 420px) {
+    .hamburger {
+        display: block;
+        font-size: 1.3rem;
+    }
+    .innerNav > .logo {
+        margin-left: 0;
+    }
+    .tabs {
+        width: 330px;
+        margin: auto;
+        flex-direction: column;
+    }
+    .inputCont {
+        border: 2px solid white;
+        width: 100%;
+        margin-left: 0;
+    }
+    .tabsLinks {
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .tabsLinks > a {
+        font-size: 8px;
+    }
+    .tabsLinks > span {
+        padding: 0.8rem;
+    }
+    .innerNav {
+        width: 330px;
+        margin: auto;
+    }
+    .navRight {
+        display: none;
+    }
+  
+    .generalistBlog {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 330px;
+        padding-top: 6rem;
+    }
+
+    .authorPickCard, .latestBanner, .latestContent{
+        width: 330px;
+    }
+
+    .latestContent > h1{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .latestContent > p{
+        width: 100%;
+        text-align: center;
+    }
+    .authorCard {
+        box-shadow: 0.3rem 0.3rem 7px rgb(95, 94, 95);
+    }
 }
